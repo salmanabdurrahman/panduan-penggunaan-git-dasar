@@ -1,83 +1,69 @@
-# Panduan Perintah Git
+# Dasar-Dasar Penggunaan Git untuk Pemula
 
-Panduan ini menyediakan referensi cepat untuk perintah-perintah Git umum yang akan Anda gunakan selama pengembangan.
+Berikut adalah beberapa perintah dasar Git yang berguna untuk pemula:
 
-## Konfigurasi
+1. **`ls`**: Menampilkan daftar isi direktori.
 
-Atur konfigurasi username/email global Anda:
+2. **Konfigurasi Global**:
+   - `git config --global user.name "Nama Anda"`: Mengatur nama Anda untuk semua repositori di sistem Anda.
+   - `git config --global user.email "email_anda@example.com"`: Mengatur email Anda untuk semua repositori di sistem Anda.
 
-\`\`\`
-git config --global user.name "Nama Anda"
-git config --global user.email "email_anda@example.com"
-\`\`\`
+3. **`git init`**: Menginisialisasi repositori Git baru.
 
-## Pengaturan Repositori
+4. **Commit Perubahan**:
+   - `git commit -m "Initial commit"`: Commit perubahan dengan pesan.
 
-Inisialisasi repositori Git baru:
+5. **Melihat Riwayat Commit**:
+   - `git log`: Menampilkan log commit.
+   - `git log -3`: Menampilkan 3 commit terakhir.
+   - `git log -- style.css`: Menampilkan commit yang termasuk perubahan pada `style.css`.
 
-\`\`\`
-git init
-\`\`\`
+6. **Checkout File**:
+   - `git checkout [7-digit SHA] -- style.css`: Mengembalikan `style.css` ke keadaan pada commit tertentu.
 
-## Commit Perubahan
+7. **`git status`**: Memeriksa status perubahan sebagai untracked, modified, atau staged.
 
-Commit perubahan Anda dengan pesan deskriptif:
+8. **Branching**:
+   - `git branch`: Menampilkan daftar branch.
+   - `git branch [nama-branch]`: Membuat branch baru.
 
-\`\`\`
-git commit -m "Pesan commit Anda"
-\`\`\`
+9. **Visualisasi Branch**:
+   - `git log --all --decorate --oneline --graph`: Menampilkan grafik ASCII dari riwayat branch.
 
-## Melihat Riwayat
+10. **Membuat Alias**:
+    - `alias graph="git log --all --decorate --oneline --graph"`: Membuat alias untuk perintah di atas.
 
-Lihat riwayat commit Anda:
+11. **Berpindah Branch**:
+    - `git checkout [nama-branch]`: Berpindah ke branch lain.
 
-\`\`\`
-git log
-\`\`\`
+12. **Merging**:
+    - Fast-forward merge: Penggabungan sederhana yang memindahkan pointer branch dasar ke depan.
+    - Three-way merge: Penggabungan yang melibatkan nenek moyang bersama, membuat commit baru.
 
-Untuk file tertentu atau entri terbatas, gunakan:
+13. **Menggabungkan Branch**:
+    - `git merge [nama-branch]`: Menggabungkan branch lain ke dalam branch saat ini.
 
-\`\`\`
-git log -- [nama-file]
-git log -[jumlah]
-\`\`\`
+14. **Menghapus Branch**:
+    - `git branch -d [nama-branch]`: Menghapus branch yang telah digabungkan.
+    - `git branch -D [nama-branch]`: Menghapus branch secara paksa tanpa digabungkan terlebih dahulu.
 
-## Branching
+15. **Memeriksa Branch yang Telah Digabungkan**:
+    - `git branch --merged`: Menampilkan daftar branch yang telah digabungkan ke dalam branch saat ini.
 
-Daftar, buat, atau hapus branch:
+16. **Clone Repositori**:
+    - `git clone [URL]`: Mengkloning repositori dari URL.
 
-\`\`\`
-git branch
-git branch [nama-branch-baru]
-git branch -d [nama-branch]
-\`\`\`
+17. **Repositori Remote**:
+    - `git remote`: Menampilkan koneksi remote.
+    - `git remote add [nama] [url]`: Menambahkan koneksi remote baru dengan URL.
 
-Berpindah antar branch:
+18. **Push Perubahan**:
+    - `git push -u origin main`: Push perubahan ke branch utama dari repositori remote dan mengatur pelacakan upstream.
 
-\`\`\`
-git checkout [nama-branch]
-\`\`\`
+19. **Fetch Perubahan**:
+    - `git fetch`: Mengambil perubahan dari repositori remote untuk memperbarui referensi lokal.
 
-Menggabungkan branch:
+20. **Pull Perubahan**:
+    - `git pull`: Mengambil dan menggabungkan perubahan dari repositori remote ke direktori kerja Anda.
 
-\`\`\`
-git merge [nama-branch]
-\`\`\`
-
-## Repositori Remote
-
-Kelola repositori remote Anda:
-
-\`\`\`
-git remote
-git remote add [nama] [url]
-\`\`\`
-
-Push atau pull perubahan:
-
-\`\`\`
-git push [nama-remote] [nama-branch]
-git pull
-\`\`\`
-
-Untuk perintah yang lebih detail dan strategi branching, silakan merujuk ke dokumentasi resmi Git.
+Semoga rangkuman ini membantu Anda memahami dasar-dasar Git! Jika Anda memiliki pertanyaan lebih lanjut, jangan ragu untuk bertanya. 😊
