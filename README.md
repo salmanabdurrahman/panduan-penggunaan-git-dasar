@@ -65,5 +65,3 @@ Berikut adalah beberapa perintah dasar Git yang berguna untuk pemula:
 
 20. **Pull Perubahan**:
     - `git pull`: Mengambil dan menggabungkan perubahan dari repositori remote ke direktori kerja Anda.
-
-Semoga rangkuman ini membantu Anda memahami dasar-dasar Git! Jika Anda memiliki pertanyaan lebih lanjut, jangan ragu untuk bertanya. 😊
